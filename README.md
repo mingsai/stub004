@@ -1,16 +1,32 @@
 # stub004
 
-A new Flutter project.
+A new Flutter project that works on Linux Debian 9/Chromebook (HP x360 14, 8GB RAM, 64GB SSD).
 
-## Getting Started
+## Getting Started with Linux build
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a Flutter application. I am testing that a Linux build is possible.
 
-A few resources to get you started if this is your first Flutter project:
+In flutter enable the linux desktop support, then create your own project, and make the mods noted below.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+NOTE: You may have to run flutter run -d linux before the linux folders are generated. Then you will need to add the two missing files noted below.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Ensure that you latest version of gcc, clang++, and make installed using apt-get. You may have to link the clang-x++ and clang-x file to corresponding commands clang and clang++. 
+
+- Modify the Makefile with the application name. Verify that the main.cc file is in place within the linux folder.
+
+Required modifications to the main.dart include an appropriate test for the correct platform and the required imports as follows:
+
+    import 'package:flutter/foundation.dart' show debugDefaultTargetPlatformOverride;
+    import 'dart:io' show Platform;
+    import 'package:flutter/material.dart';
+    
+    void main(){
+        _setTargetPlatformForDesktop();
+        runApp(MyApp());
+    }  
+    void _setTargetPlatformForDesktop() {
+        // No need to handle macOS, as it has now been added to TargetPlatform.
+        if (Platform.isLinux || Platform.isWindows) {
+            debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+        }
+    }
