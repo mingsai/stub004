@@ -48,21 +48,29 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(0.0),
         alignment: Alignment.center,
       ),
-      bottomNavigationBar:
-          BottomNavigationBar(backgroundColor: Colors.green, items: [
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
-          title: Text('Settings'),
-        ),
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.star),
-          title: Text('Favorites'),
-        ),
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.star),
-          title: Text('Title'),
-        ),
-      ]),
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          selectedIconTheme: IconThemeData(color: Colors.red),
+          unselectedIconTheme: IconThemeData(color: Colors.white),
+          backgroundColor: Colors.green,
+          items: [
+            const BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+            const BottomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              title: Text('Favorites'),
+            ),
+            const BottomNavigationBarItem(
+              icon: Icon(Icons.add_to_photos),
+              title: Text('Photos'),
+            ),
+            const BottomNavigationBarItem(
+              icon: Icon(Icons.list),
+              title: Text('Widgets'),
+            ),
+          ]),
     );
   }
 }

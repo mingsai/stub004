@@ -6,16 +6,14 @@ import 'package:stub004/home.dart';
 void main() {
     _setTargetPlatformForDesktop();
     runApp(MyApp());
-}  
+}
 void _setTargetPlatformForDesktop() {
     // No need to handle macOS, as it has now been added to TargetPlatform.
     if (Platform.isLinux || Platform.isWindows) {
         debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
     }
 }
-
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
