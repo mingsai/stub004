@@ -48,7 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(0.0),
         alignment: Alignment.center,
       ),
-      bottomNavigationBar:  BottomNavigationBar(items: [
+      bottomNavigationBar:
+          BottomNavigationBar( items: [
         const BottomNavigationBarItem(
           icon: Icon(Icons.star),
           title: Text('Title1'),
