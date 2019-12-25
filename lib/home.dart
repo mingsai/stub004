@@ -12,7 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Container(
         child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Flexible(
                 child: FractionallySizedBox(
-                  heightFactor: 0.7,
+                  heightFactor: 0.5,
                   widthFactor: 0.7,
                   child: Image.asset(
                     'assets/images/joshua-coleman-kFRKvJQtNHg-unsplash.jpg',
@@ -49,23 +49,19 @@ class _MyHomePageState extends State<MyHomePage> {
         alignment: Alignment.center,
       ),
       bottomNavigationBar:
-          BottomNavigationBar( items: [
+          BottomNavigationBar(backgroundColor: Colors.green, items: [
+        const BottomNavigationBarItem(
+          icon: Icon(Icons.settings),
+          title: Text('Settings'),
+        ),
         const BottomNavigationBarItem(
           icon: Icon(Icons.star),
-          title: Text('Title1'),
+          title: Text('Favorites'),
         ),
         const BottomNavigationBarItem(
           icon: Icon(Icons.star),
           title: Text('Title'),
         ),
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.star),
-          title: Text('Title'),
-        ),
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.star),
-          title: Text('Title'),
-        )
       ]),
     );
   }
