@@ -373,5 +373,10 @@
 # Jenkins Pipeline
 - ^Jenkinsfile$
 
-# Linux generated
-- (^|/)linux/
+# Flutter generated
+- (^|/)linux/*
+- (^|/)macos/*
+- (^|/)web/*
+- (^|/)ios/*
+- (^|/)android/*
+- (^|/)build/*
