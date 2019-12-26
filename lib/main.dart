@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Generated App',
+      title: 'Stub004',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        primaryColor: const Color(0xFF2196f3),
+        primaryColor: Colors.red[100],//const Color(0xFF2196f3),
         accentColor: const Color(0xFF2196f3),
         canvasColor: const Color(0xFFfafafa),
         fontFamily: 'Merriweather',

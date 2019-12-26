@@ -10,43 +10,45 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: const <Widget>[
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'Spectacular Title',
-                      style: TextStyle(
-                          fontSize: 27.0,
-                          color: Color(0xFF000000),
-                          fontWeight: FontWeight.w700,
-                          fontFamily: 'Roboto'),
+      body: SafeArea(
+        child: Container(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'Spectacular Title',
+                        style: TextStyle(
+                            fontSize: 27.0,
+                            color: Color(0xFF000000),
+                            fontWeight: FontWeight.w700,
+                            fontFamily: 'Roboto'),
+                      ),
+                    ),
+                  ],
+                ),
+                Flexible(
+                  child: FractionallySizedBox(
+                    heightFactor: 0.5,
+                    widthFactor: 0.7,
+                    child: Image.asset(
+                      'assets/images/joshua-coleman-kFRKvJQtNHg-unsplash.jpg',
+                      fit: BoxFit.fitWidth,
                     ),
                   ),
-                ],
-              ),
-              Flexible(
-                child: FractionallySizedBox(
-                  heightFactor: 0.5,
-                  widthFactor: 0.7,
-                  child: Image.asset(
-                    'assets/images/joshua-coleman-kFRKvJQtNHg-unsplash.jpg',
-                    fit: BoxFit.fitWidth,
-                  ),
                 ),
-              ),
-            ]),
-        padding: const EdgeInsets.all(0.0),
-        alignment: Alignment.center,
+              ]),
+          padding: const EdgeInsets.all(0.0),
+          alignment: Alignment.center,
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
