@@ -374,9 +374,9 @@
 - ^Jenkinsfile$
 
 # Flutter generated
-- (^|/)linux/*
-- (^|/)macos/*
-- (^|/)web/*
-- (^|/)ios/*
-- (^|/)android/*
-- (^|/)build/*
+- ^linux/
+- ^macos/
+- ^web/
+- ^ios/
+- ^android/
+- ^build/

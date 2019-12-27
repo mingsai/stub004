@@ -9,9 +9,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    //isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
     return Scaffold(
       body: SafeArea(
         child: Container(
+          color: Colors.amberAccent,
           child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               mainAxisSize: MainAxisSize.max,
@@ -36,12 +38,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 Flexible(
+                  // fit:FlexFit.loose,
                   child: FractionallySizedBox(
-                    heightFactor: 0.5,
+                    heightFactor: 0.95,
                     widthFactor: 0.7,
-                    child: Image.asset(
-                      'assets/images/joshua-coleman-kFRKvJQtNHg-unsplash.jpg',
-                      fit: BoxFit.fitWidth,
+                    child: InkWell(
+                      onTap: () => print('pressed'),
+                      // padding: const EdgeInsets.all(0.0),
+                      child: Image.asset(
+                        'assets/images/joshua-coleman-kFRKvJQtNHg-unsplash.jpg',
+                        fit: BoxFit.fitWidth,
+                      ),
                     ),
                   ),
                 ),
@@ -57,8 +64,8 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Colors.green,
           items: [
             const BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Settings'),
+              icon: Icon(Icons.home) ,
+              title: Text('Home'),
             ),
             const BottomNavigationBarItem(
               icon: Icon(Icons.favorite),
