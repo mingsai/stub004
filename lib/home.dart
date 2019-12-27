@@ -62,20 +62,20 @@ class _MyHomePageState extends State<MyHomePage> {
           selectedIconTheme: IconThemeData(color: Colors.red),
           unselectedIconTheme: IconThemeData(color: Colors.white),
           backgroundColor: Colors.green,
-          items: [
-            const BottomNavigationBarItem(
-              icon: Icon(Icons.home) ,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
               title: Text('Home'),
             ),
-            const BottomNavigationBarItem(
+            BottomNavigationBarItem(
               icon: Icon(Icons.favorite),
               title: Text('Favorites'),
             ),
-            const BottomNavigationBarItem(
+            BottomNavigationBarItem(
               icon: Icon(Icons.add_to_photos),
               title: Text('Photos'),
             ),
-            const BottomNavigationBarItem(
+            BottomNavigationBarItem(
               icon: Icon(Icons.list),
               title: Text('Widgets'),
             ),
